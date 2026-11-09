@@ -106,6 +106,29 @@ ul { list-style: none; }
     background-clip: text;
 }
 
+/* Uptern-style editorial italic serif typography */
+.serif-italic {
+    font-family: 'Newsreader', 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.hero-microcopy {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: -40px;
+    margin-bottom: 48px;
+    letter-spacing: 0.3px;
+    animation: fadeInUp 0.6s ease 0.7s both;
+}
+
 .highlight {
     color: var(--primary-light);
     font-weight: 500;
@@ -344,9 +367,10 @@ ul { list-style: none; }
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-size: clamp(2.5rem, 6.5vw, 4.4rem);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
     margin-bottom: 24px;
     animation: fadeInUp 0.6s ease 0.2s both;
 }
