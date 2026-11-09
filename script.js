@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     style.textContent = `
         .nav-link.active-link {
             color: var(--primary-light) !important;
-            background: rgba(124,58,237,0.1);
+            background: rgba(249,115,22,0.1);
         }
     `;
     document.head.appendChild(style);
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .skill-card .skill-card-glow {
             background: radial-gradient(
                 300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-                rgba(124,58,237,0.12),
+                rgba(249,115,22,0.14),
                 transparent 50%
             );
         }
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalHTML = submitBtn.innerHTML;
 
             submitBtn.innerHTML = '<span>Opening Mail Draft... ✓</span>';
-            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
+            submitBtn.style.background = 'linear-gradient(135deg, #ea580c, #fb923c)';
             submitBtn.disabled = true;
 
             // Direct mailto trigger so the message arrives in your Gmail
@@ -376,8 +376,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.speedX = (Math.random() - 0.5) * 0.4;
                 this.speedY = (Math.random() - 0.5) * 0.4;
                 this.opacity = Math.random() * 0.5 + 0.1;
-                // Colors: purple, cyan, amber
-                const colors = ['rgba(124,58,237,', 'rgba(6,182,212,', 'rgba(245,158,11,'];
+                // Single dynamic color palette: shades of warm amber/electric orange
+                const colors = ['rgba(249,115,22,', 'rgba(251,146,60,', 'rgba(234,88,12,'];
                 this.color = colors[Math.floor(Math.random() * colors.length)];
             }
 
@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
                     if (dist < 120) {
-                        ctx.strokeStyle = `rgba(124,58,237,${0.08 * (1 - dist / 120)})`;
+                        ctx.strokeStyle = `rgba(249,115,22,${0.08 * (1 - dist / 120)})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
