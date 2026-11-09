@@ -288,8 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const messages = [
             '⚡ Hardware & Embedded Systems Builder',
             '🔬 B.Tech ECE • University of Lucknow',
-            '♻️ Project Neodymium • Rare-Earth Cleantech',
-            '🤖 Mesmerize Robot • Autonomous Robotics',
+            '🤖 Project Mesmerize • Autonomous Line Tracker',
+            '📐 2-Layer KiCad Motherboard PCB Design',
             '📡 ESP32 & Embedded Systems Firmware',
             '🌐 Multi-Agent Systems & Team Hacksphere'
         ];
