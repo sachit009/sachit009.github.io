@@ -173,30 +173,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ======================== CONTACT FORM ========================
     const contactForm = document.getElementById('contactForm');
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText('sachitchaurasiya22@gmail.com').then(() => {
+                const originalText = copyEmailBtn.innerHTML;
+                copyEmailBtn.innerHTML = '<span>Copied! ✓</span>';
+                copyEmailBtn.style.background = 'rgba(16,185,129,0.2)';
+                copyEmailBtn.style.borderColor = 'rgba(16,185,129,0.4)';
+                setTimeout(() => {
+                    copyEmailBtn.innerHTML = originalText;
+                    copyEmailBtn.style.background = '';
+                    copyEmailBtn.style.borderColor = '';
+                }, 2000);
+            });
+        });
+    }
 
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        // Visual feedback
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalHTML = submitBtn.innerHTML;
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
 
-        submitBtn.innerHTML = '<span>Message Sent! ✓</span>';
-        submitBtn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
-        submitBtn.disabled = true;
+            // Visual feedback
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalHTML = submitBtn.innerHTML;
 
-        setTimeout(() => {
-            submitBtn.innerHTML = originalHTML;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-            contactForm.reset();
-        }, 3000);
+            submitBtn.innerHTML = '<span>Opening Mail Draft... ✓</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
+            submitBtn.disabled = true;
 
-        console.log('Form data:', data);
-    });
+            // Direct mailto trigger so the message arrives in your Gmail
+            const subject = encodeURIComponent(data.subject || `Portfolio Inquiry from ${data.name}`);
+            const body = encodeURIComponent(`Hi Sachit,\n\n${data.message}\n\n---\nFrom: ${data.name}\nEmail: ${data.email}`);
+            const mailtoUrl = `mailto:sachitchaurasiya22@gmail.com?subject=${subject}&body=${body}`;
+
+            setTimeout(() => {
+                window.location.href = mailtoUrl;
+                submitBtn.innerHTML = originalHTML;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                contactForm.reset();
+            }, 600);
+        });
+    }
 
     // ======================== SMOOTH SCROLL FOR ALL ANCHORS ========================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

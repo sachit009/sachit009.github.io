@@ -1178,6 +1178,40 @@ ul { list-style: none; }
     font-size: 0.9rem;
 }
 
+.email-link {
+    color: var(--primary-light);
+    word-break: break-all;
+    transition: var(--transition);
+}
+
+.email-link:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+}
+
+.btn-copy-email {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 50px;
+    color: var(--primary-light);
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-copy-email:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
 .social-links {
     display: flex;
     gap: 12px;
