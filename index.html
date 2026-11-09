@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachit Kumar Chaurasiya — Student &amp; Aspiring Developer</title>
+    <meta name="description" content="Portfolio of Sachit Kumar Chaurasiya — a passionate student, problem-solver, and aspiring developer ready to make an impact.">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Sachit Kumar Chaurasiya — Portfolio">
+    <meta property="og:description" content="Curious student & aspiring developer who loves turning ideas into reality through code, creativity, and sheer determination.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#7c3aed">
+    <!-- Favicon (data URI — works instantly without an image file) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ======================== PRELOADER ======================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== PARTICLE CANVAS ======================== -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#testimonials" class="nav-link">Highlights</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link nav-cta" id="resumeBtn">Resume ↓</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO SECTION ======================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">⚡ Hardware Builder &amp; ECE Undergraduate</div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Sachit Kumar</span><br>
+                <span class="hero-subtitle-line">Chaurasiya</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="highlight">Electronics &amp; Communication Engineering</span> student at University of Lucknow. Designing at the intersection of <span class="highlight">physical hardware</span>, <span class="highlight">embedded circuits</span>, and intelligent systems to solve real-world problems.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Get In Touch</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#portfolio" class="btn btn-secondary">Explore Projects</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="4">0</span>+
+                    <span class="stat-label">Major Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="12">0</span>+
+                    <span class="stat-label">Hardware &amp; Dev Tools</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>%
+                    <span class="stat-label">Engineering Grit</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ======================== ABOUT SECTION ======================== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 — Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image-frame">
+                        <div class="about-image-placeholder">
+                            <span class="placeholder-icon">SC</span>
+                        </div>
+                        <div class="about-image-decoration"></div>
+                    </div>
+                    <div class="about-image-dots"></div>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-headline">Curious Engineer. Hardware Explorer. Builder.</h3>
+                    <p class="about-text">
+                        I'm Sachit Kumar Chaurasiya — an Electronics &amp; Communication Engineering undergraduate at <strong>University of Lucknow</strong> with a deep passion for pulling things apart, understanding how physics and silicon interact, and assembling real, working machines.
+                    </p>
+                    <p class="about-text">
+                        My real excitement lives where electrons meet physical mechanics: from applying the <strong>Curie point physics</strong> of rare-earth magnets to engineer induction recycling machinery, to designing custom robotics motherboards and 8-channel differential IR sensor arrays for our autonomous <strong>Mesmerize Robot</strong> in KiCad.
+                    </p>
+                    <p class="about-text">
+                        I don't believe in code that exists only in isolation on a screen. Whether it's programming microcontrollers like the <strong>ESP32</strong>, soldering custom circuits, or co-designing voice-first AI agents for 600M rural citizens with Team Hacksphere, I build for the tangible physical world.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <span class="detail-text">Lucknow, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🎓</span>
+                            <span class="detail-text">B.Tech ECE, Univ. of Lucknow</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">⚡</span>
+                            <span class="detail-text">Hardware &amp; Embedded Systems</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🚀</span>
+                            <span class="detail-text">Open to Core Internships &amp; Roles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== SKILLS SECTION ======================== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 — Engineering Toolkit</span>
+                <h2 class="section-title">Hardware, Circuits &amp; <span class="gradient-text">Software</span></h2>
+                <p class="section-desc">From physical schematics and silicon to embedded firmware and intelligent systems.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-category="pcb">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">⚡</div>
+                    <h3 class="skill-name">PCB Design &amp; EDA</h3>
+                    <p class="skill-desc">Schematic capture, multi-layer board layout, signal routing, and footprint design.</p>
+                    <div class="skill-tags">
+                        <span class="tag">KiCad 10</span>
+                        <span class="tag">EasyEDA</span>
+                        <span class="tag">Schematic Design</span>
+                        <span class="tag">2-Layer PCB</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="embedded">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🎛️</div>
+                    <h3 class="skill-name">Embedded Systems &amp; IoT</h3>
+                    <p class="skill-desc">Microcontroller programming, hardware timers, and communication protocols.</p>
+                    <div class="skill-tags">
+                        <span class="tag">ESP32</span>
+                        <span class="tag">Arduino</span>
+                        <span class="tag">PlatformIO</span>
+                        <span class="tag">I2C / SPI / UART</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="circuits">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🔬</div>
+                    <h3 class="skill-name">Circuit Engineering</h3>
+                    <p class="skill-desc">Shift register multiplexing, transistor switches, sensor arrays, and analog signal conditioning.</p>
+                    <div class="skill-tags">
+                        <span class="tag">74HC595</span>
+                        <span class="tag">BC817 / Transistors</span>
+                        <span class="tag">Hall Effect Sensors</span>
+                        <span class="tag">Induction Physics</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-name">Programming &amp; Firmware</h3>
+                    <p class="skill-desc">Writing performant low-level firmware and automated technical tooling.</p>
+                    <div class="skill-tags">
+                        <span class="tag">C / C++</span>
+                        <span class="tag">Python (OOP)</span>
+                        <span class="tag">Data Structures</span>
+                        <span class="tag">ReportLab PDF</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="ai">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-name">AI &amp; Deep Tech Systems</h3>
+                    <p class="skill-desc">Multi-agent orchestrations, tool-calling protocols, and India Stack API integrations.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Model Context Protocol</span>
+                        <span class="tag">Multi-Agent AI</span>
+                        <span class="tag">DigiLocker API</span>
+                        <span class="tag">Voice UI</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="lab">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon">🛠️</div>
+                    <h3 class="skill-name">Lab &amp; Prototyping</h3>
+                    <p class="skill-desc">Hands-on diagnostic bench tools, reverse-engineering, and mechanical prototyping.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Reverse Engineering</span>
+                        <span class="tag">Hardware Debugging</span>
+                        <span class="tag">Soldering</span>
+                        <span class="tag">Git &amp; GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TECH MARQUEE ======================== -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span class="marquee-item">KiCad 10</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">ESP32</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Induction Heating</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">PCB Design</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">PlatformIO</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">C/C++</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">74HC595 Multiplexing</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Python</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Hall-Effect Sensors</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Arduino</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Model Context Protocol</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Git &amp; GitHub</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Embedded Firmware</span>
+                <span class="marquee-dot">◆</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="marquee-item">KiCad 10</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">ESP32</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Induction Heating</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">PCB Design</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">PlatformIO</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">C/C++</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">74HC595 Multiplexing</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Python</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Hall-Effect Sensors</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Arduino</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Model Context Protocol</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Git &amp; GitHub</span>
+                <span class="marquee-dot">◆</span>
+                <span class="marquee-item">Embedded Firmware</span>
+                <span class="marquee-dot">◆</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== PORTFOLIO SECTION ======================== -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 — What I've Built</span>
+                <h2 class="section-title">Hardware, Deep Tech &amp; <span class="gradient-text">Systems</span></h2>
+                <p class="section-desc">Grounded engineering projects born from hands-on experimentation, physical physics, and real-world necessity.</p>
+            </div>
+
+            <!-- Portfolio Filter Buttons -->
+            <div class="portfolio-filters">
+                <button class="portfolio-filter-btn active" data-filter="all">All Projects</button>
+                <button class="portfolio-filter-btn" data-filter="hardware">⚙️ Hardware &amp; Embedded</button>
+                <button class="portfolio-filter-btn" data-filter="cleantech">⚡ Cleantech &amp; Deep Tech</button>
+                <button class="portfolio-filter-btn" data-filter="ai">🤖 AI &amp; Systems</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1: Project Neodymium (Featured Flagship) -->
+                <div class="project-card project-card-featured" data-category="hardware cleantech">
+                    <div class="project-image">
+                        <div class="project-hardware-visual" style="--accent-color: #f59e0b;">
+                            <div class="hardware-schematic-bg">
+                                <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic-svg">
+                                    <circle cx="200" cy="120" r="90" stroke="rgba(245,158,11,0.25)" stroke-width="2" stroke-dasharray="6 4"/>
+                                    <circle cx="200" cy="120" r="70" stroke="rgba(245,158,11,0.4)" stroke-width="3"/>
+                                    <circle cx="200" cy="120" r="45" stroke="#f59e0b" stroke-width="2"/>
+                                    <!-- Rotor magnets -->
+                                    <rect x="194" y="32" width="12" height="24" rx="2" fill="#06b6d4" opacity="0.9"/>
+                                    <rect x="194" y="184" width="12" height="24" rx="2" fill="#06b6d4" opacity="0.9"/>
+                                    <rect x="112" y="114" width="24" height="12" rx="2" fill="#06b6d4" opacity="0.9"/>
+                                    <rect x="264" y="114" width="24" height="12" rx="2" fill="#06b6d4" opacity="0.9"/>
+                                    <!-- Induction flux lines -->
+                                    <path d="M 120 70 Q 200 10 280 70" stroke="rgba(245,158,11,0.6)" stroke-width="1.5" stroke-dasharray="4 2"/>
+                                    <path d="M 120 170 Q 200 230 280 170" stroke="rgba(245,158,11,0.6)" stroke-width="1.5" stroke-dasharray="4 2"/>
+                                    <text x="200" y="125" text-anchor="middle" fill="#f59e0b" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">310°C CURIE</text>
+                                </svg>
+                            </div>
+                            <div class="hardware-badge">⚡ Flagship Cleantech Hardware</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header-meta">
+                            <span class="project-pill pill-amber">Deep Tech • Cleantech</span>
+                            <span class="project-pill pill-violet">Physical Automation</span>
+                        </div>
+                        <h3 class="project-title">Project Neodymium: Automated Rare-Earth Magnet Demanufacturing Machine</h3>
+                        <p class="project-tagline">Non-destructive recovery of high-grade sintered NdFeB permanent magnets from scrap EV and e-rickshaw motor rotors.</p>
+                        
+                        <div class="project-story-box">
+                            <h4 class="story-heading">💡 The Ground Reality</h4>
+                            <p class="story-paragraph">
+                                Walking through motor scrap clusters in Lucknow, I watched scrap workers attack broken e-rickshaw motor rotors with chisels and hammers. Sintered Neodymium-Iron-Boron (NdFeB) magnets have a brutal <strong>30–50 kg magnetic clamping pull</strong> and behave like brittle ceramic tiles: hammering shatters the rare metal into fine dust, while friction sparks spontaneous pyrophoric fires. High-grade Neodymium, Praseodymium, and Dysprosium—essential for India's EV transition—were being ruined by hand.
+                            </p>
+                            <h4 class="story-heading">⚙️ The Hardware Solution</h4>
+                            <p class="story-paragraph">
+                                I engineered a physical demanufacturing machine combining thermal physics and mechanical automation. Using <strong>eddy-current induction heating</strong>, the rotor reaches its Curie Temperature (310°C–340°C), instantaneously demagnetizing the magnets while thermally softening the industrial epoxy glue. An automated <strong>Hall-Effect sensor array</strong> grades magnetic flux and spots fake motors, and a <strong>universal stainless-steel multi-finger press</strong> slides every magnet bar intact out of its slot in a <strong>2.5-minute automated cycle</strong>—zero shatters, zero sparks.
+                            </p>
+                        </div>
+
+                        <div class="project-specs-grid">
+                            <div class="spec-card">
+                                <span class="spec-num">310°C–340°C</span>
+                                <span class="spec-desc">Curie Thermal Demagnetization</span>
+                            </div>
+                            <div class="spec-card">
+                                <span class="spec-num">2.5 Min</span>
+                                <span class="spec-desc">Automated Rotor Cycle Time</span>
+                            </div>
+                            <div class="spec-card">
+                                <span class="spec-num">250g–350g</span>
+                                <span class="spec-desc">NdFeB Recovered per Rotor</span>
+                            </div>
+                            <div class="spec-card">
+                                <span class="spec-num">98%+</span>
+                                <span class="spec-desc">Non-Destructive Yield Rate</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Induction Heating</span>
+                            <span>Curie Point Physics</span>
+                            <span>Hall-Effect Array</span>
+                            <span>Mechanical Demanufacturing</span>
+                            <span>NdFeB Rare Earths</span>
+                            <span>Circular Economy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Mesmerize Robot -->
+                <div class="project-card" data-category="hardware">
+                    <div class="project-image">
+                        <div class="project-hardware-visual" style="--accent-color: #06b6d4;">
+                            <div class="hardware-schematic-bg">
+                                <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic-svg">
+                                    <!-- Robot Chassis outline -->
+                                    <rect x="70" y="30" width="180" height="140" rx="16" stroke="#06b6d4" stroke-width="2" fill="rgba(6,182,212,0.06)"/>
+                                    <!-- Left Wheel -->
+                                    <rect x="42" y="55" width="22" height="90" rx="4" fill="#151522" stroke="#06b6d4" stroke-width="1.5"/>
+                                    <line x1="42" y1="75" x2="64" y2="75" stroke="#06b6d4" stroke-width="1"/>
+                                    <line x1="42" y1="100" x2="64" y2="100" stroke="#06b6d4" stroke-width="1"/>
+                                    <line x1="42" y1="125" x2="64" y2="125" stroke="#06b6d4" stroke-width="1"/>
+                                    <!-- Right Wheel -->
+                                    <rect x="256" y="55" width="22" height="90" rx="4" fill="#151522" stroke="#06b6d4" stroke-width="1.5"/>
+                                    <line x1="256" y1="75" x2="278" y2="75" stroke="#06b6d4" stroke-width="1"/>
+                                    <line x1="256" y1="100" x2="278" y2="100" stroke="#06b6d4" stroke-width="1"/>
+                                    <line x1="256" y1="125" x2="278" y2="125" stroke="#06b6d4" stroke-width="1"/>
+                                    <!-- Front 8-IR Sensor Array Bar -->
+                                    <rect x="80" y="14" width="160" height="20" rx="4" fill="rgba(124,58,237,0.25)" stroke="#7c3aed" stroke-width="1.5"/>
+                                    <circle cx="92" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="108" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="124" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="140" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="180" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="196" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="212" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <circle cx="228" cy="24" r="3.5" fill="#f59e0b"/>
+                                    <text x="160" y="27" text-anchor="middle" fill="#a78bfa" font-family="'Space Grotesk', sans-serif" font-size="8" font-weight="700">8-CH IR SENSOR ARRAY</text>
+                                    <!-- Central ESP32 Host MCU -->
+                                    <rect x="115" y="52" width="90" height="58" rx="4" fill="rgba(10,10,20,0.85)" stroke="#a78bfa" stroke-width="1.5"/>
+                                    <text x="160" y="85" text-anchor="middle" fill="#a78bfa" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">ESP32 PID</text>
+                                    <!-- TB6612FNG Driver -->
+                                    <rect x="125" y="122" width="70" height="34" rx="3" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1.5"/>
+                                    <text x="160" y="143" text-anchor="middle" fill="#67e8f9" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="600">TB6612FNG</text>
+                                    <!-- Calibration button & Goal LED -->
+                                    <circle cx="95" cy="80" r="6" fill="#f59e0b" stroke="#fff" stroke-width="1"/>
+                                    <text x="95" y="98" text-anchor="middle" fill="#fbbf24" font-size="7" font-family="'Space Grotesk', sans-serif">CALIB</text>
+                                    <circle cx="225" cy="80" r="5" fill="#10b981" stroke="#fff" stroke-width="1"/>
+                                    <text x="225" y="98" text-anchor="middle" fill="#6ee7b7" font-size="7" font-family="'Space Grotesk', sans-serif">GOAL</text>
+                                </svg>
+                            </div>
+                            <div class="hardware-badge">🤖 Autonomous Mobile Robotics</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header-meta">
+                            <span class="project-pill pill-cyan">Robotics Hardware</span>
+                            <span class="project-pill pill-violet">ESP32 &amp; PCB</span>
+                        </div>
+                        <h3 class="project-title">Mesmerize Robot: Autonomous Line-Tracking &amp; Maze Navigation Hardware</h3>
+                        <p class="project-tagline">Custom 6x4" motherboard PCB integrating an 8-channel differential IR sensor array, dual TB6612FNG motor drivers, and real-time PID control.</p>
+                        
+                        <div class="project-story-box">
+                            <h4 class="story-heading">⚡ The Engineering Challenge</h4>
+                            <p class="story-paragraph">
+                                Autonomous line-tracking and maze-solving robots frequently fail at competition speeds due to optical sensor noise, physical chassis vibration, and power rail instability caused by inductive motor back-EMF resetting the microcontroller. I designed Mesmerize Robot from scratch to solve these hardware hurdles with a dedicated, custom motherboard rather than fragile breadboard wiring.
+                            </p>
+                            <h4 class="story-heading">🛠️ Hardware &amp; Circuit Architecture</h4>
+                            <p class="story-paragraph">
+                                Engineered a <strong>6x4 inch (152.4 x 101.6 mm) custom motherboard PCB</strong> in KiCad with 0.25mm signal traces and a 205mm isolated sensor harness. The board pairs a <strong>30-pin ESP32 microcontroller</strong> running real-time PID loops with an <strong>8-channel differential IR reflectance sensor array</strong> (`IR_S1` through `IR_S8`), a <strong>TB6612FNG dual MOSFET motor driver</strong>, and decoupled power filtering capacitors to completely isolate motor transients from the MCU logic. Added an on-board hardware calibration button and goal indicator LED.
+                            </p>
+                        </div>
+
+                        <div class="project-specs-grid">
+                            <div class="spec-card">
+                                <span class="spec-num">8-Channel</span>
+                                <span class="spec-desc">Differential IR Sensor Array</span>
+                            </div>
+                            <div class="spec-card">
+                                <span class="spec-num">TB6612FNG</span>
+                                <span class="spec-desc">Dual MOSFET H-Bridge Driver</span>
+                            </div>
+                            <div class="spec-card">
+                                <span class="spec-num">6x4 Inch</span>
+                                <span class="spec-desc">Custom Controller PCB</span>
+                            </div>
+                            <div class="spec-card">
+                                <span class="spec-num">ESP32</span>
+                                <span class="spec-desc">Real-Time PID Control Host</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Autonomous Robotics</span>
+                            <span>KiCad PCB</span>
+                            <span>ESP32</span>
+                            <span>TB6612FNG</span>
+                            <span>8-IR Sensor Array</span>
+                            <span>PID Control</span>
+                            <span>Power Conditioning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: GramSetu (Team Hacksphere) -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <div class="project-hardware-visual" style="--accent-color: #10b981;">
+                            <div class="hardware-schematic-bg">
+                                <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic-svg">
+                                    <!-- User voice -->
+                                    <circle cx="60" cy="100" r="30" stroke="#10b981" stroke-width="2" fill="rgba(16,185,129,0.08)"/>
+                                    <path d="M 52 92 Q 60 85 68 92 T 68 108" stroke="#10b981" stroke-width="2"/>
+                                    <!-- MCP Hub -->
+                                    <rect x="130" y="70" width="80" height="60" rx="8" stroke="#7c3aed" stroke-width="2" fill="rgba(124,58,237,0.1)"/>
+                                    <text x="170" y="105" text-anchor="middle" fill="#a78bfa" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">MCP HUB</text>
+                                    <!-- India Stack -->
+                                    <rect x="245" y="50" width="60" height="36" rx="4" stroke="#06b6d4" stroke-width="1.5"/>
+                                    <text x="275" y="72" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="'Space Grotesk', sans-serif">DigiLocker</text>
+                                    <rect x="245" y="110" width="60" height="36" rx="4" stroke="#06b6d4" stroke-width="1.5"/>
+                                    <text x="275" y="132" text-anchor="middle" fill="#06b6d4" font-size="9" font-family="'Space Grotesk', sans-serif">UMANG</text>
+                                    <!-- Connecting lines -->
+                                    <path d="M 90 100 L 130 100" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
+                                    <path d="M 210 90 L 245 68" stroke="#7c3aed" stroke-width="1.5"/>
+                                    <path d="M 210 110 L 245 128" stroke="#7c3aed" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="hardware-badge">🤖 Voice AI &amp; Social Impact</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header-meta">
+                            <span class="project-pill pill-emerald">Team Hacksphere</span>
+                            <span class="project-pill pill-violet">Multi-Agent MCP</span>
+                        </div>
+                        <h3 class="project-title">GramSetu: Voice-First Rural AI Platform</h3>
+                        <p class="project-tagline">Multi-agent architecture bridging the digital divide for 600M rural citizens across 22 regional Indian languages.</p>
+                        
+                        <div class="project-story-box">
+                            <h4 class="story-heading">🤝 The Human Problem</h4>
+                            <p class="story-paragraph">
+                                85% of rural citizens in India abandon government service applications due to English-only forms and technical jargon. As core member (Design &amp; Hardware/UX lead) of Team Hacksphere, I focused on making technology feel invisible: conversational voice interaction over WhatsApp with zero app downloads.
+                            </p>
+                            <h4 class="story-heading">🧠 Deep Tech Architecture</h4>
+                            <p class="story-paragraph">
+                                Built on the <strong>Model Context Protocol (MCP)</strong>: orchestrating specialized agents (Orchestrator, Form Extractor, Rule Validator, and Safety Agent) seamlessly connected to <strong>DigiLocker, Aadhaar, and UMANG</strong> platforms.
+                            </p>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Multi-Agent AI</span>
+                            <span>Model Context Protocol</span>
+                            <span>WhatsApp Platform</span>
+                            <span>India Stack</span>
+                            <span>Voice-First UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: ESP32 Edge Computing & Telemetry Node -->
+                <div class="project-card" data-category="hardware">
+                    <div class="project-image">
+                        <div class="project-hardware-visual" style="--accent-color: #a78bfa;">
+                            <div class="hardware-schematic-bg">
+                                <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic-svg">
+                                    <!-- ESP32 Board -->
+                                    <rect x="70" y="35" width="180" height="130" rx="8" stroke="#a78bfa" stroke-width="2" fill="rgba(124,58,237,0.08)"/>
+                                    <!-- Metal shield -->
+                                    <rect x="95" y="55" width="70" height="70" rx="4" fill="rgba(255,255,255,0.06)" stroke="#a78bfa" stroke-width="1.5"/>
+                                    <text x="130" y="94" text-anchor="middle" fill="#a78bfa" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">ESP32-WROOM</text>
+                                    <!-- WiFi antenna traces -->
+                                    <path d="M 100 45 L 160 45 L 160 50 L 105 50" stroke="#f59e0b" stroke-width="1.5"/>
+                                    <!-- Pin headers -->
+                                    <line x1="75" y1="40" x2="75" y2="160" stroke="#06b6d4" stroke-width="4" stroke-dasharray="4 6"/>
+                                    <line x1="245" y1="40" x2="245" y2="160" stroke="#06b6d4" stroke-width="4" stroke-dasharray="4 6"/>
+                                </svg>
+                            </div>
+                            <div class="hardware-badge">📡 Embedded Systems &amp; IoT</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header-meta">
+                            <span class="project-pill pill-cyan">PlatformIO</span>
+                            <span class="project-pill pill-amber">Embedded C++</span>
+                        </div>
+                        <h3 class="project-title">ESP32 Real-Time Sensor Telemetry &amp; Control Node</h3>
+                        <p class="project-tagline">Interrupt-driven embedded firmware for sensor signal conditioning, PWM actuator driving, and telemetry.</p>
+                        
+                        <div class="project-story-box">
+                            <h4 class="story-heading">⚡ The Workbench Reality</h4>
+                            <p class="story-paragraph">
+                                Breadboard circuits often fail when physical electrical noise, switch contact bounce, and supply voltage drops occur. I built this testing platform with the ESP32 DevKit-v1 and PlatformIO to explore production-grade firmware patterns.
+                            </p>
+                            <h4 class="story-heading">💻 Firmware Implementation</h4>
+                            <p class="story-paragraph">
+                                Implemented hardware timer interrupts for jitter-free transducer sampling, moving-average digital filtering on analog inputs, non-blocking asynchronous event loops, and robust WiFi telemetry with automatic reconnection states.
+                            </p>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>ESP32</span>
+                            <span>Embedded C++</span>
+                            <span>PlatformIO</span>
+                            <span>I2C / SPI Sensors</span>
+                            <span>FreeRTOS</span>
+                            <span>Hardware Timers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TESTIMONIALS / HIGHLIGHTS ======================== -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 — Highlights</span>
+                <h2 class="section-title">Peer Notes &amp; <span class="gradient-text">Milestones</span></h2>
+                <p class="section-desc">Recognition from collaborators and the engineering milestones that define my path.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Sachit combines rigorous theoretical grounding in Electronics and Communication with an uncommon drive for physical hardware prototyping. His Project Neodymium engineering framework is a masterclass in grounded cleantech thinking.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🎓</div>
+                        <div class="author-info">
+                            <span class="author-name">Academic Mentor</span>
+                            <span class="author-role">Dept. of ECE, Univ. of Lucknow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Building GramSetu under hackathon deadlines, Sachit brought our user experience and systems thinking to life. He bridges the gap between deep tech engineering and genuine human accessibility effortlessly.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🤝</div>
+                        <div class="author-info">
+                            <span class="author-name">Team Hacksphere Member</span>
+                            <span class="author-role">GramSetu Co-Builder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h4 class="achievement-title">Engineering Milestones</h4>
+                    <ul class="achievement-list">
+                        <li>Lead Technical Founder of <strong>Project Neodymium</strong> (Automated Rare-Earth Demanufacturing)</li>
+                        <li>Designed &amp; routed custom 6x4" controller PCB &amp; 8-channel sensor array for <strong>Mesmerize Robot</strong></li>
+                        <li>Core Design &amp; Systems Member at <strong>Team Hacksphere</strong> (GramSetu Voice AI for 600M citizens)</li>
+                        <li>Active B.Tech Electronics &amp; Communication Engineering undergraduate at <strong>University of Lucknow</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT SECTION ======================== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05 — Let's Talk</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-desc">Have a project in mind, want to collaborate, or just say hello? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>sachit.chaurasiya@email.com</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📍</div>
+                        <h4>Location</h4>
+                        <p>India</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon">💼</div>
+                        <h4>Status</h4>
+                        <p>Open for Opportunities</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sachit-kumar-chaurasiya-8b2126395" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://github.com/sachit009" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener" class="social-link" aria-label="Twitter / X">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder=" ">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== BACK TO TOP ======================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & built with 💜 by Sachit Kumar Chaurasiya</p>
+                <p class="footer-copyright">© 2026 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
